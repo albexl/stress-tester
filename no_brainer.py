@@ -1,0 +1,39 @@
+def _generate_common_component():
+    pass
+
+def _generate_href_component():
+    pass
+
+def _generate_span_component():
+    pass
+
+def _generate_div_component():
+    pass
+
+class HTMLGenerator:
+    @staticmethod
+    def generate_component(self, component_type: str):
+        writer_method = getattr(
+            self, f"_generate_{component_type}_component", "generate_common_component"
+        )
+        writer_method()
+
+    def _generate_common_component():
+        ...
+        ...
+        ...
+
+    def _generate_href_component():
+        ...
+        ...
+        ...
+
+    def _generate_span_component():
+        ...
+        ...
+        ...
+
+    def _generate_div_component():
+        ...
+        ...
+        ...
