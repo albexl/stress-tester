@@ -1,19 +1,19 @@
-from no_brainer import HTMLGenerator
-from no_brainer import (
-    _generate_common_component,
-    _generate_div_component,
-    _generate_href_component,
-    _generate_span_component,
-)
+def solution(a, x):
+    l = 0
+    r = len(a) - 1
+    while l <= r:
+        m = (l + r) // 2
+        if a[m] == x:
+            return m
+        elif a[m] < x:
+            l = m + 1
+        else:
+            r = m - 1
+    return -1
 
-HTMLGenerator.generate_component(component_type)
 
-
-generator_functions = {
-    "common": generate_common_component,
-    "href": generate_href_component,
-    "span": generate_span_component,
-    "div": generate_div_component,
-}
-
-generator_functions[component_type]()
+if __name__ == "__main__":
+    n = int(input())
+    num_list = list(map(int, input().split()))
+    x = int(input())
+    print(solution(num_list, x))
