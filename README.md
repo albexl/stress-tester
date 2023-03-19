@@ -1,6 +1,6 @@
 # Stress-Tester
 
-Code examples used for the [NAME](LINK) article in Hashnode.
+Code examples used for the [A Tale of Debugging: The Competitive Programmer Approach (Part II)](https://albexl.hashnode.dev/a-tale-of-debugging-the-competitive-programmer-approach-part-ii) article in Hashnode.
 
 ## Usage
 
