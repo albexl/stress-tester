@@ -19,7 +19,7 @@ echo "Starting stress testing with $TEST_CASES test case(s)..."
 mkdir -p "$TEST_CASES_DIRECTORY" # Create directory to store test cases
 for i in `seq -f "%0${#TEST_CASES}g" 1 $TEST_CASES`
 do
-    INPUT="$TEST_CASES_DIRECTORY/$i.in"
+    INPUT="$TEST_CASES_DIRECTORY/input-$i.in"
 
     eval "$RUN_GENERATOR" > "$INPUT"  # Generate a test case
     DIFF=$(diff -w <(eval "$RUN_SOLUTION" < "$INPUT") <(eval "$RUN_NAIVE" < "$INPUT"))  # Evaluate the test case in both solutions and get their output differences

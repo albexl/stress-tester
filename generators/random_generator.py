@@ -1,3 +1,6 @@
+"""Module with the random generator functions."""
+
+
 import random
 
 
@@ -11,6 +14,5 @@ def generate_input():
 
 if __name__ == "__main__":
     a, x = generate_input()
-    print(len(a))
     print(" ".join([str(elem) for elem in a]))
     print(x)

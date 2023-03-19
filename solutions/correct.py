@@ -1,19 +1,19 @@
-"""Module with the solution to test."""
+"""Module with the correct solution. Just for illustrative purposes."""
 
 
 def solution(a, x):
     l = 0
     r = len(a) - 1
+    pos = -1
     while l <= r:
         m = (l + r) // 2
-        if a[m] == x:
-            return m
-
-        if a[m] < x:
-            l = m + 1
-        else:
+        if a[m] >= x:
+            pos = m
             r = m - 1
-    return -1
+        else:
+            l = m + 1
+
+    return pos
 
 
 if __name__ == "__main__":
